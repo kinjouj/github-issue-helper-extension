@@ -1,5 +1,5 @@
 function _onhashchange() {
-  var matches = document.URL.match(/#L([\d]+)?$/);
+  var matches = document.URL.match(/#L(?:[\d]+)$/);
 
   if (matches) {
     var path = $('.js-permalink-shortcut').attr('href') + matches[0];
