@@ -1,0 +1,22 @@
+{
+  "name": "github-local-issue-tracker",
+  "dependencies": {
+    "babel-runtime": "^5.8.24",
+    "bluebird": "^2.10.0"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "npm-run-all": "^1.2.11"
+  },
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:background": "browserify -t babelify -d src/background.js -o background.js"
+  },
+  "babel": {
+    "stage": 0,
+    "optional": [
+      "es7.asyncFunctions",
+      "runtime"
+    ]
+  }
+}
